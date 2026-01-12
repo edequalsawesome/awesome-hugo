@@ -1,4 +1,4 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://awesome-hugo.pages.dev/'
 languageCode = 'en-us'
 title = 'eD! Thomas'
 theme = 'awesome-90s'
