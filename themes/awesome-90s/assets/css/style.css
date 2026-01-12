@@ -308,31 +308,54 @@ a:hover {
 }
 
 /* --------------------------------------------
-   SQUIGGLY DIVIDER
+   SQUIGGLY DIVIDER (Animated Flow)
    -------------------------------------------- */
 .squiggle-divider {
   width: 100%;
   height: 20px;
   margin: var(--space-lg) 0;
+  overflow: hidden;
 }
 
 .squiggle-divider svg {
-  width: 100%;
+  width: calc(100% + 60px);
   height: 100%;
 }
 
-.squiggle-divider path {
+.squiggle-divider .squiggle-path {
   stroke: var(--color-accent-primary);
   stroke-width: 3;
   fill: none;
+  stroke-linecap: round;
+  animation: squiggle-flow 2s linear infinite;
 }
 
-.squiggle-divider.alt path {
+.squiggle-divider.alt .squiggle-path {
   stroke: var(--magenta-hot);
+  animation-duration: 2.5s;
+  animation-direction: reverse;
 }
 
-.squiggle-divider.mint path {
+.squiggle-divider.mint .squiggle-path {
   stroke: var(--mint-slime);
+  animation-duration: 2.2s;
+}
+
+/* 60px = one full wave cycle, so animation loops seamlessly */
+@keyframes squiggle-flow {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-60px);
+  }
+}
+
+/* Accessibility: Reduce motion for those who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  .squiggle-divider .squiggle-path {
+    animation: none;
+  }
 }
 
 /* --------------------------------------------
