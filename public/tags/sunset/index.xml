@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sunset on eD! Thomas</title>
+    <link>http://localhost:1313/tags/sunset/</link>
+    <description>Recent content in Sunset on eD! Thomas</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 08 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/sunset/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mountain Sunset</title>
+      <link>http://localhost:1313/photos/mountain-sunset/</link>
+      <pubDate>Thu, 08 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photos/mountain-sunset/</guid>
+      <description>&lt;p&gt;One of those moments where you just stop walking and stare for a while. The photo doesn&amp;rsquo;t do it justice, but then again, they never do.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

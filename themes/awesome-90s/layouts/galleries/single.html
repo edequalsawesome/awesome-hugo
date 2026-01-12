@@ -1,0 +1,101 @@
+{{ define "main" }}
+<article class="gallery-post">
+  <header class="gallery-header">
+    <h1 class="gallery-title">{{ .Title }}</h1>
+
+    <div class="gallery-meta">
+      <time datetime="{{ .Date.Format "2006-01-02" }}">
+        {{ .Date.Format "January 2, 2006" }}
+      </time>
+      {{ with .Params.location }}
+      <span class="gallery-location">
+        <span class="meta-icon">&#x1F4CD;</span> {{ . }}
+      </span>
+      {{ end }}
+      {{ with .Params.images }}
+      <span class="gallery-count">
+        <span class="meta-icon">&#x1F4F7;</span> {{ len . }} {{ if eq (len .) 1 }}photo{{ else }}photos{{ end }}
+      </span>
+      {{ end }}
+    </div>
+
+    {{ if .Params.tags }}
+    <ul class="tag-list">
+      {{ range .Params.tags }}
+      <li><a href="{{ "/tags/" | relURL }}{{ . | urlize }}" class="tag">{{ . }}</a></li>
+      {{ end }}
+    </ul>
+    {{ end }}
+  </header>
+
+  {{/* Intro text if any */}}
+  {{ if .Content }}
+  <div class="gallery-intro">
+    {{ .Content }}
+  </div>
+  {{ end }}
+
+  {{ partial "squiggle.html" (dict "color" "mint") }}
+
+  {{/* Image grid with lightbox triggers */}}
+  {{ with .Params.images }}
+  <div class="gallery-images">
+    {{ range $index, $image := . }}
+    <figure class="gallery-image-item">
+      <a href="#lightbox-{{ $index }}" class="gallery-image-link">
+        <img src="{{ $image.src }}" alt="{{ $image.caption | default "Gallery image" }}" loading="lazy">
+        <div class="gallery-image-overlay">
+          <span class="gallery-zoom-icon">&#x1F50D;</span>
+        </div>
+      </a>
+      {{ with $image.caption }}
+      <figcaption>{{ . }}</figcaption>
+      {{ end }}
+    </figure>
+
+    {{/* Lightbox modal for this image */}}
+    <div id="lightbox-{{ $index }}" class="lightbox">
+      <a href="#!" class="lightbox-close">&times;</a>
+      <div class="lightbox-content">
+        <img src="{{ $image.src }}" alt="{{ $image.caption | default "Gallery image" }}">
+        {{ with $image.caption }}
+        <p class="lightbox-caption">{{ . }}</p>
+        {{ end }}
+      </div>
+      {{/* Prev/Next navigation */}}
+      {{ $total := len $.Params.images }}
+      {{ $prev := sub $index 1 }}
+      {{ $next := add $index 1 }}
+      <div class="lightbox-nav">
+        {{ if ge $prev 0 }}
+        <a href="#lightbox-{{ $prev }}" class="lightbox-prev">&larr; Prev</a>
+        {{ else }}
+        <span class="lightbox-prev lightbox-disabled">&larr; Prev</span>
+        {{ end }}
+        <span class="lightbox-counter">{{ add $index 1 }} / {{ $total }}</span>
+        {{ if lt $next $total }}
+        <a href="#lightbox-{{ $next }}" class="lightbox-next">Next &rarr;</a>
+        {{ else }}
+        <span class="lightbox-next lightbox-disabled">Next &rarr;</span>
+        {{ end }}
+      </div>
+    </div>
+    {{ end }}
+  </div>
+  {{ else }}
+  <p>This gallery has no images yet.</p>
+  {{ end }}
+
+  {{ partial "squiggle.html" (dict "color" "alt") }}
+
+  <nav class="gallery-nav">
+    {{ with .PrevInSection }}
+    <a href="{{ .Permalink }}" class="btn btn-secondary">&larr; {{ .Title }}</a>
+    {{ end }}
+    <a href="{{ "/galleries/" | relURL }}" class="btn btn-slime">All Galleries</a>
+    {{ with .NextInSection }}
+    <a href="{{ .Permalink }}" class="btn btn-primary">{{ .Title }} &rarr;</a>
+    {{ end }}
+  </nav>
+</article>
+{{ end }}

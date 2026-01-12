@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Meta on eD! Thomas</title>
+    <link>http://localhost:1313/tags/meta/</link>
+    <description>Recent content in Meta on eD! Thomas</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 12 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/meta/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Would&#39;ja Look At This New Site?!</title>
+      <link>http://localhost:1313/posts/hello-world/</link>
+      <pubDate>Mon, 12 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/hello-world/</guid>
+      <description>&lt;p&gt;Welcome to the new site! If you&amp;rsquo;re reading this, you&amp;rsquo;ve survived the assault on your retinas that is my color palette. Congratulations on your fortitude.&lt;/p&gt;&#xA;&lt;h2 id=&#34;why-hugo&#34;&gt;Why Hugo?&lt;/h2&gt;&#xA;&lt;p&gt;Because sometimes you want your blog posts to be plain text files that you can read in any editor, version control with git, and know will still be readable in 20 years.&lt;/p&gt;&#xA;&lt;p&gt;Also it&amp;rsquo;s &lt;em&gt;fast&lt;/em&gt;. Like, absurdly fast. No database, no PHP, just pure unadulterated shenanigans rendered to HTML.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

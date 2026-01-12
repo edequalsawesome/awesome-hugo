@@ -1,0 +1,54 @@
+<header class="site-header">
+  <div class="header-inner">
+    {{/* Left side: Logo + Title + Tagline */}}
+    <div class="header-brand">
+      <a href="{{ .Site.BaseURL }}" class="header-logo-link">
+        {{ $avatar := .Site.Params.avatar }}
+        {{ if $avatar }}
+        <img src="{{ $avatar }}" alt="{{ .Site.Title }}" class="header-avatar">
+        {{ else }}
+        <div class="header-avatar-placeholder">
+          <span>:)</span>
+        </div>
+        {{ end }}
+      </a>
+      <div class="header-title-block">
+        <h1 class="site-title">
+          <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+        </h1>
+        <p class="site-tagline" id="rotating-tagline">
+          {{/* Default tagline - will be replaced by JS */}}
+          {{ with .Site.Params.tagline }}{{ . }}{{ end }}
+        </p>
+      </div>
+    </div>
+
+    {{/* Right side: Navigation */}}
+    <nav class="main-nav">
+      <ul>
+        {{ range .Site.Menus.main }}
+        <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+        {{ end }}
+      </ul>
+    </nav>
+  </div>
+
+</header>
+{{ partial "squiggle.html" (dict "color" "primary") }}
+
+{{/* Tagline rotation script */}}
+<script>
+(function() {
+  const taglineEl = document.getElementById('rotating-tagline');
+  const taglines = [
+    {{- range $i, $t := .Site.Data.taglines }}
+    {{- if $i }}, {{ end }}"{{ $t }}"
+    {{- end }}
+  ];
+
+  if (taglineEl && taglines.length > 0) {
+    const randomIndex = Math.floor(Math.random() * taglines.length);
+    taglineEl.textContent = taglines[randomIndex];
+  }
+})();
+</script>

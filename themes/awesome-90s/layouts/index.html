@@ -1,0 +1,30 @@
+{{ define "main" }}
+<section class="recent-posts">
+  <h2>Recent Posts</h2>
+
+  {{ $posts := where .Site.RegularPages "Section" "posts" }}
+  {{ if $posts }}
+  <ul class="post-list">
+    {{ range first 5 $posts }}
+    <li class="post-card">
+      <div class="post-meta">
+        <time datetime="{{ .Date.Format "2006-01-02" }}">
+          {{ .Date.Format "Jan 2, 2006" }}
+        </time>
+      </div>
+      <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+      {{ if .Summary }}
+      <p>{{ .Summary }}</p>
+      {{ end }}
+    </li>
+    {{ end }}
+  </ul>
+
+  <p style="text-align: center; margin-top: var(--space-lg);">
+    <a href="{{ "posts/" | relURL }}" class="btn btn-slime">View All Posts</a>
+  </p>
+  {{ else }}
+  <p>No posts yet! Create your first post in <code>content/posts/</code>.</p>
+  {{ end }}
+</section>
+{{ end }}

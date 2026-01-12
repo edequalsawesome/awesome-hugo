@@ -1,0 +1,16 @@
+name = "Awesome 90s"
+license = "MIT"
+licenselink = "https://github.com/yourname/awesome-90s/blob/master/LICENSE"
+description = "A chaotic 90s Nickelodeon/Surge-inspired Hugo theme"
+homepage = "https://github.com/yourname/awesome-90s"
+tags = ["blog", "90s", "colorful", "fun"]
+features = ["blog", "syntax highlighting"]
+min_version = "0.120.0"
+
+[author]
+  name = "You"
+  homepage = ""
+
+[params]
+  # Toggle between "light" and "purple" color schemes
+  colorScheme = "purple"

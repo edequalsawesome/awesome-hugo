@@ -1,0 +1,48 @@
+{{ define "main" }}
+<header class="page-header">
+  <h1>{{ .Title | default "Galleries" }}</h1>
+  <p class="page-description">Collections of photos from trips, events, and other adventures.</p>
+</header>
+
+{{ partial "squiggle.html" (dict "color" "primary") }}
+
+{{ if .Pages }}
+<div class="gallery-grid">
+  {{ range .Pages }}
+  <a href="{{ .Permalink }}" class="gallery-card">
+    {{/* Use cover image, or first image from array, or placeholder */}}
+    {{ $coverImage := .Params.cover }}
+    {{ if not $coverImage }}
+      {{ with index .Params.images 0 }}
+        {{ $coverImage = .src }}
+      {{ end }}
+    {{ end }}
+
+    {{ if $coverImage }}
+    <img src="{{ $coverImage }}" alt="{{ .Title }}" loading="lazy" class="gallery-cover">
+    {{ else }}
+    <div class="gallery-placeholder">
+      <span>No images</span>
+    </div>
+    {{ end }}
+
+    <div class="gallery-card-info">
+      <h3>{{ .Title }}</h3>
+      <div class="gallery-card-meta">
+        {{ with .Params.location }}
+        <span class="gallery-location">{{ . }}</span>
+        {{ end }}
+        <span class="gallery-count">
+          {{ len .Params.images }} {{ if eq (len .Params.images) 1 }}photo{{ else }}photos{{ end }}
+        </span>
+      </div>
+    </div>
+  </a>
+  {{ end }}
+</div>
+{{ else }}
+<p>No galleries yet. Time to go on an adventure!</p>
+{{ end }}
+
+{{ template "_internal/pagination.html" . }}
+{{ end }}

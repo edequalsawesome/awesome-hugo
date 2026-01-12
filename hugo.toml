@@ -1,0 +1,41 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'eD! Thomas'
+theme = 'awesome-90s'
+
+[params]
+  # "purple" or "light"
+  colorScheme = "purple"
+  # Default tagline (shown before JS loads, also used if taglines.yaml is empty)
+  tagline = "Excels Equally in Awesomeness & Modesty"
+  description = "Some Tomfoolery & Occasional Nonsense"
+  # Avatar image - put your image in static/images/ and reference it here
+  # Example: avatar = "/images/avatar.png"
+  avatar = "/images/ed-avatar.png"
+
+[menu]
+  [[menu.main]]
+    name = "Posts"
+    url = "/posts/"
+    weight = 1
+  [[menu.main]]
+    name = "Photos"
+    url = "/photos/"
+    weight = 2
+  [[menu.main]]
+    name = "Galleries"
+    url = "/galleries/"
+    weight = 3
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 4
+
+[markup]
+  [markup.highlight]
+    style = "monokai"
+    lineNos = false
+    codeFences = true
+
+[pagination]
+  pagerSize = 10

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dogs on eD! Thomas</title>
+    <link>http://localhost:1313/tags/dogs/</link>
+    <description>Recent content in Dogs on eD! Thomas</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 10 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/dogs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Good Boy at the Park</title>
+      <link>http://localhost:1313/photos/good-boy-at-the-park/</link>
+      <pubDate>Sat, 10 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photos/good-boy-at-the-park/</guid>
+      <description>&lt;p&gt;He&amp;rsquo;s not technically &lt;em&gt;my&lt;/em&gt; dog, but he didn&amp;rsquo;t know that, and neither did I for approximately three glorious minutes.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

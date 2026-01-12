@@ -1,0 +1,76 @@
+{{ define "main" }}
+<article class="photo-post">
+  {{/* Hero image - the star of the show */}}
+  {{ with .Params.image }}
+  <figure class="photo-hero">
+    <img src="{{ . }}" alt="{{ $.Title }}" loading="lazy">
+  </figure>
+  {{ end }}
+
+  <div class="photo-details">
+    <header class="photo-header">
+      <h1 class="photo-title">{{ .Title }}</h1>
+
+      <div class="photo-meta">
+        <time datetime="{{ .Date.Format "2006-01-02" }}">
+          {{ .Date.Format "January 2, 2006" }}
+        </time>
+        {{ with .Params.location }}
+        <span class="photo-location">
+          <span class="meta-icon">&#x1F4CD;</span> {{ . }}
+        </span>
+        {{ end }}
+        {{ with .Params.camera }}
+        <span class="photo-camera">
+          <span class="meta-icon">&#x1F4F7;</span> {{ . }}
+        </span>
+        {{ end }}
+      </div>
+
+      {{ if .Params.tags }}
+      <ul class="tag-list">
+        {{ range .Params.tags }}
+        <li><a href="{{ "/tags/" | relURL }}{{ . | urlize }}" class="tag">{{ . }}</a></li>
+        {{ end }}
+      </ul>
+      {{ end }}
+    </header>
+
+    {{/* Caption/story content if any */}}
+    {{ if .Content }}
+    <div class="photo-caption">
+      {{ .Content }}
+    </div>
+    {{ end }}
+  </div>
+
+  {{ partial "squiggle.html" (dict "color" "mint") }}
+
+  {{/* Photo navigation - visual prev/next */}}
+  <nav class="photo-nav">
+    {{ with .PrevInSection }}
+    <a href="{{ .Permalink }}" class="photo-nav-item photo-nav-prev">
+      {{ with .Params.image }}
+      <img src="{{ . }}" alt="{{ $.Title }}" loading="lazy">
+      {{ end }}
+      <span class="photo-nav-label">&larr; {{ .Title }}</span>
+    </a>
+    {{ else }}
+    <span class="photo-nav-item photo-nav-placeholder"></span>
+    {{ end }}
+
+    <a href="{{ "/photos/" | relURL }}" class="btn btn-slime">Back to Gallery</a>
+
+    {{ with .NextInSection }}
+    <a href="{{ .Permalink }}" class="photo-nav-item photo-nav-next">
+      {{ with .Params.image }}
+      <img src="{{ . }}" alt="{{ $.Title }}" loading="lazy">
+      {{ end }}
+      <span class="photo-nav-label">{{ .Title }} &rarr;</span>
+    </a>
+    {{ else }}
+    <span class="photo-nav-item photo-nav-placeholder"></span>
+    {{ end }}
+  </nav>
+</article>
+{{ end }}

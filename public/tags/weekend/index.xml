@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Weekend on eD! Thomas</title>
+    <link>http://localhost:1313/tags/weekend/</link>
+    <description>Recent content in Weekend on eD! Thomas</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 08 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/weekend/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Weekend at the Coast</title>
+      <link>http://localhost:1313/galleries/weekend-at-the-coast/</link>
+      <pubDate>Thu, 08 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/galleries/weekend-at-the-coast/</guid>
+      <description>&lt;p&gt;Escaped to the coast for a couple of days. Ate too much seafood, collected zero shells but many memories. The usual wholesome nonsense.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>eD! Thomas</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on eD! Thomas</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 12 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Would&#39;ja Look At This New Site?!</title>
+      <link>http://localhost:1313/posts/hello-world/</link>
+      <pubDate>Mon, 12 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/hello-world/</guid>
+      <description>&lt;p&gt;Welcome to the new site! If you&amp;rsquo;re reading this, you&amp;rsquo;ve survived the assault on your retinas that is my color palette. Congratulations on your fortitude.&lt;/p&gt;&#xA;&lt;h2 id=&#34;why-hugo&#34;&gt;Why Hugo?&lt;/h2&gt;&#xA;&lt;p&gt;Because sometimes you want your blog posts to be plain text files that you can read in any editor, version control with git, and know will still be readable in 20 years.&lt;/p&gt;&#xA;&lt;p&gt;Also it&amp;rsquo;s &lt;em&gt;fast&lt;/em&gt;. Like, absurdly fast. No database, no PHP, just pure unadulterated shenanigans rendered to HTML.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>On Design Choices (Or: Why Does This Site Look Like a Lisa Frank Trapper Keeper?)</title>
+      <link>http://localhost:1313/posts/on-design-choices/</link>
+      <pubDate>Sun, 11 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/on-design-choices/</guid>
+      <description>&lt;p&gt;Everyone&amp;rsquo;s doing clean, minimal, Helvetica-on-white websites these days. And that&amp;rsquo;s fine. Those sites are perfectly readable and professional and &lt;em&gt;utterly devoid of whimsy&lt;/em&gt;.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-case-for-chaos&#34;&gt;The case for chaos&lt;/h2&gt;&#xA;&lt;p&gt;Remember when the web was fun? When every Geocities page had a different background GIF and at least three &amp;ldquo;Under Construction&amp;rdquo; signs? When choosing a color palette meant &amp;ldquo;all of them&amp;rdquo;?&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;m not saying we should go back to &lt;code&gt;&amp;lt;blink&amp;gt;&lt;/code&gt; tags and auto-playing MIDI files. But maybe we overcorrected.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Good Boy at the Park</title>
+      <link>http://localhost:1313/photos/good-boy-at-the-park/</link>
+      <pubDate>Sat, 10 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photos/good-boy-at-the-park/</guid>
+      <description>&lt;p&gt;He&amp;rsquo;s not technically &lt;em&gt;my&lt;/em&gt; dog, but he didn&amp;rsquo;t know that, and neither did I for approximately three glorious minutes.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Mountain Sunset</title>
+      <link>http://localhost:1313/photos/mountain-sunset/</link>
+      <pubDate>Thu, 08 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photos/mountain-sunset/</guid>
+      <description>&lt;p&gt;One of those moments where you just stop walking and stare for a while. The photo doesn&amp;rsquo;t do it justice, but then again, they never do.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Weekend at the Coast</title>
+      <link>http://localhost:1313/galleries/weekend-at-the-coast/</link>
+      <pubDate>Thu, 08 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/galleries/weekend-at-the-coast/</guid>
+      <description>&lt;p&gt;Escaped to the coast for a couple of days. Ate too much seafood, collected zero shells but many memories. The usual wholesome nonsense.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>A Breakfast Situation</title>
+      <link>http://localhost:1313/photos/breakfast-situation/</link>
+      <pubDate>Mon, 05 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photos/breakfast-situation/</guid>
+      <description>&lt;p&gt;Is it pretentious to photograph your breakfast? Probably. Did I do it anyway? Obviously.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Coffee Shops of Portland</title>
+      <link>http://localhost:1313/galleries/coffee-shops-of-portland/</link>
+      <pubDate>Sat, 03 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/galleries/coffee-shops-of-portland/</guid>
+      <description>&lt;p&gt;A deeply unscientific tour of some of Portland&amp;rsquo;s finest caffeinated establishments. Research is ongoing.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>City Lights</title>
+      <link>http://localhost:1313/photos/city-lights/</link>
+      <pubDate>Fri, 02 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photos/city-lights/</guid>
+      <description>&lt;p&gt;There&amp;rsquo;s something about a city at night that makes everything feel both enormous and intimate at the same time.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>About</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/about/</guid>
+      <description>&lt;p&gt;Hi! I&amp;rsquo;m the person behind this aggressively colorful corner of the internet. I&amp;rsquo;m very interested in things and stuff.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-is-this&#34;&gt;What is this?&lt;/h2&gt;&#xA;&lt;p&gt;A blog. A playground. A place to write things down so I don&amp;rsquo;t forget them. Mostly shenanigans.&lt;/p&gt;&#xA;&lt;h2 id=&#34;why-does-it-look-like-this&#34;&gt;Why does it look like this?&lt;/h2&gt;&#xA;&lt;p&gt;Because I wanted it to. Because the web got too boring. Because I have a color palette and I&amp;rsquo;m not afraid to use it. Because whimsy is underrated.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
